@@ -32,11 +32,6 @@ flowchart TD
 
 
 
-
-
-
-
-
 ## ⚡ Real-World Example: Prompt to 11-File Microservice
 
 **1. Input Specification:**
