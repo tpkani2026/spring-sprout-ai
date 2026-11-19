@@ -10,13 +10,13 @@ Bootstrapping enterprise Spring Boot services involves significant repetitive se
 ## 🏗️ Hybrid LLM Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[Structured Specification Prompt] --> B[SpringSprout AI Engine<br/>Java 21 & Spring AI]
     B -->|Air-Gapped / Local Mode| C[Ollama<br/>qwen2.5-coder:7b]
     B -->|Cloud Scale Mode| D[Google GenAI<br/>gemini-3.8-flash]
-    C --> E[Tag-Driven File Parser<br/>& Disk Writer]
+    C --> E[Tag-Driven File Parser & Disk Writer]
     D --> E
-    E --> F[11-File Compilable<br/>Spring Boot 3.3.5 Service]
+    E --> F[11-File Compilable Spring Boot 3.3.5 Service]
 ```
 
 ## ⚡ Real-World Example: Prompt to 11-File Microservice
