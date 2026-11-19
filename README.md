@@ -29,6 +29,65 @@ flowchart TD
 ### Step 4: Completed 11-File Spring Boot 3.3.5 Workspace
 <img width="864" height="467" alt="image" src="https://github.com/user-attachments/assets/babc28c7-81b7-4e8d-8f45-da3c6bbece3c" />
 
+## 🧪 Importing & Verifying the Generated Microservice
+
+Every generated project is a standard Apache Maven build ready for immediate import into **Eclipse IDE** or **IntelliJ IDEA**:
+
+1. **Import into Eclipse:**
+   * Go to **File → Import → Maven → Existing Maven Projects**.
+   * Browse to the target workspace folder (e.g., `C:/Kani/eclipse-workspace/product-service`) and click **Finish**.
+2. **Compile & Boot:**
+   ```bash
+   mvn clean spring-boot:run
+   ```
+   * The generated service starts cleanly on **`http://localhost:8080`** (isolated from SpringSprout AI Studio on port `8081`).
+3. **Test Nested Bidirectional Persistence (`POST /api/products`):**
+   ```bash
+   curl -X POST http://localhost:8080/api/products \
+     -H "Content-Type: application/json" \
+     -d '{
+       "name": "Enterprise Workstation",
+       "category": "ELECTRONICS",
+       "price": 1499.0,
+       "productDetail": {
+         "manufacturer": "Dell",
+         "skuCode": "WS-2026-PRO",
+         "warrantyMonths": 36
+       },
+       "reviews": [
+         {
+           "reviewerName": "Kani",
+           "rating": 5,
+           "comment": "Zero-edit generated microservice works out of the box!"
+         }
+       ]
+     }'
+   ```
+   ### 3.1 Live REST API Verification (`POST /api/products`)
+Executing a single nested JSON request persists the parent `Product` alongside its bidirectional `@OneToOne` `ProductDetail` and `@OneToMany` `ProductReview` entities:
+<img width="1272" height="214" alt="image" src="https://github.com/user-attachments/assets/2747cffa-ac2c-4b2d-a7cd-91a492f572c8" />
+   
+4. **Inspect Relational Schema in H2 Console:**
+   * Open **`http://localhost:8080/h2-console`** in your browser.
+   * Connect using **JDBC URL:** `jdbc:h2:mem:testdb` | **User Name:** `sa` | **Password:** *(blank)*.
+   * Verify the auto-generated `PRODUCTS`, `PRODUCT_DETAILS`, and `PRODUCT_REVIEWS` tables with active foreign-key constraints:
+  
+<img width="839" height="578" alt="image" src="https://github.com/user-attachments/assets/86ba600c-c3c3-488e-84f5-d65924244ada" />
+   
+  #### a. PRODUCTS Table (Parent Entity)
+
+   <img width="670" height="300" alt="image" src="https://github.com/user-attachments/assets/5fc11a0c-a5db-4c5b-b62e-fe0aa6b7b699" />
+   
+   #### b. PRODUCT_DETAILS Table (@OneToOne Extension)
+    <img width="765" height="480" alt="image" src="https://github.com/user-attachments/assets/68a13890-d4d2-4bb8-9eed-5a6212a0fbde" />
+    
+   #### c. PRODUCT_REVIEWS Table (@OneToMany Child Entity)
+
+<img width="835" height="475" alt="image" src="https://github.com/user-attachments/assets/9e6bbd3f-cd6a-4ef2-99f9-27108f86da26" />
+
+
+
+
 
 
 
