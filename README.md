@@ -79,7 +79,7 @@ Executing a single nested JSON request persists the parent `Product` alongside i
    <img width="670" height="300" alt="image" src="https://github.com/user-attachments/assets/5fc11a0c-a5db-4c5b-b62e-fe0aa6b7b699" />
    
    #### b. PRODUCT_DETAILS Table (@OneToOne Extension)
-    <img width="765" height="480" alt="image" src="https://github.com/user-attachments/assets/68a13890-d4d2-4bb8-9eed-5a6212a0fbde" />
+  <img width="765" height="480" alt="image" src="https://github.com/user-attachments/assets/68a13890-d4d2-4bb8-9eed-5a6212a0fbde" />
     
    #### c. PRODUCT_REVIEWS Table (@OneToMany Child Entity)
 
