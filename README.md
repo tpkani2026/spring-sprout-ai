@@ -17,7 +17,11 @@ flowchart TD
     C --> E[Tag-Driven File Parser & Disk Writer]
     D --> E
     E --> F[11-File Compilable Spring Boot 3.3.5 Service]
+
 ```
+## 🖥️ SpringSprout AI Studio (Live Execution Flow)
+<img  width="672" height="443" alt="image" src="https://github.com/user-attachments/assets/78ed5c0a-973a-4215-a904-29b27c402bcd" />
+
 
 ## ⚡ Real-World Example: Prompt to 11-File Microservice
 
