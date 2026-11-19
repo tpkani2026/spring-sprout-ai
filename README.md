@@ -20,7 +20,21 @@ flowchart TD
 
 ```
 ## 🖥️ SpringSprout AI Studio (Live Execution Flow)
-<img  width="672" height="443" alt="image" src="https://github.com/user-attachments/assets/78ed5c0a-973a-4215-a904-29b27c402bcd" />
+### Step 1: Select Inference Engine (Ollama Local vs. Google Gemini)
+<img width="781" height="577" alt="image" src="https://github.com/user-attachments/assets/8aaac0b5-e124-481b-a4f1-8ef52a2e287a" />
+### Step 2: Configure Target Eclipse Workspace & Architectural Blueprint
+<img width="1009" height="443" alt="image" src="https://github.com/user-attachments/assets/4e2fc853-8b75-4355-8256-2606e2b3c2f2" />
+### Step 3: Live Streaming Synthesis & Backoff Pipeline Initialization
+<img width="1030" height="347" alt="image" src="https://github.com/user-attachments/assets/343e2ab3-bc13-4735-b791-f97050b7da01" />
+### Step 4: Completed 11-File Spring Boot 3.3.5 Workspace
+<img width="864" height="467" alt="image" src="https://github.com/user-attachments/assets/babc28c7-81b7-4e8d-8f45-da3c6bbece3c" />
+
+
+
+
+
+
+
 
 
 ## ⚡ Real-World Example: Prompt to 11-File Microservice
