@@ -86,11 +86,6 @@ Executing a single nested JSON request persists the parent `Product` alongside i
 <img width="835" height="475" alt="image" src="https://github.com/user-attachments/assets/9e6bbd3f-cd6a-4ef2-99f9-27108f86da26" />
 
 
-
-
-
-
-
 ## ⚡ Real-World Example: Prompt to 11-File Microservice
 
 **1. Input Specification:**
@@ -125,6 +120,9 @@ product-service/
 * **Dual-Model Flexibility (Local + Cloud):** Seamlessly switch between 100% air-gapped local inference via **Ollama (`qwen2.5-coder:7b`)** for strict enterprise data privacy and **Google Gemini (`gemini-3.8-flash`)** for high-speed cloud generation.
 * **Deterministic Multi-File Synthesis:** Enforces structured `[FILE: path]` boundary tags to parse and generate complete, zero-shortcut codebases (entities, repositories, validators, exception handlers, controllers, and `pom.xml`) without `// TODO` placeholders.
 * **Enterprise JPA & REST Patterns:** Automatically wires bidirectional parent-child helper methods, Jackson recursion protection (`@JsonManagedReference` / `@JsonBackReference`), and `@Transactional` service boundaries.
+* **Incremental Module Expansion & Iterative File Modification:** Goes beyond initial greenfield scaffolding—enabling architects and developers to generate new feature modules on demand or modify existing Java classes, REST endpoints, and configuration files in place using targeted natural-language prompts.
+
+
 
 ## 🛠️ Tech Stack
 * **Core Language:** Java 21
